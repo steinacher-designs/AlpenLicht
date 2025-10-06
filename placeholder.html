@@ -50,69 +50,15 @@
             margin-top: 20px;
             font-style: italic;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
-        }
     </style>
-    <script>
-        const sprueche = [
-            {
-                title: "Ups! Diese Seite macht gerade ein Nickerchen 😴",
-                subtitle: "Wie unsere gemütlichen Betten... nur nicht ganz so komfortabel!"
-            },
-            {
-                title: "Zeit für eine kleine Pause 🌟",
-                subtitle: "Genau wie unsere Betten... perfekt zum Entspannen!"
-            },
-            {
-                title: "Diese Seite ist noch im Traumland 💤",
-                subtitle: "Aber keine Sorge, sie kommt bald zurück!"
-            },
-            {
-                title: "Hier entsteht etwas Gemütliches 🛏️",
-                subtitle: "Fast so gemütlich wie unsere Betten!"
-            },
-            {
-                title: "Momentan im Winterschlaf 🐻",
-                subtitle: "In einem unserer kuscheligen Betten natürlich!"
-            }
-        ];
-
-        let aktuellerIndex = 0;
-        const title = document.getElementById('placeholder-title');
-        const subtitle = document.getElementById('placeholder-subtitle');
-
-        function naechsterSpruch() {
-            aktuellerIndex = (aktuellerIndex + 1) % sprueche.length;
-            title.classList.remove('fade-in');
-            subtitle.classList.remove('fade-in');
-            
-            // Trigger reflow to restart animation
-            void title.offsetWidth;
-            void subtitle.offsetWidth;
-            
-            title.textContent = sprueche[aktuellerIndex].title;
-            subtitle.textContent = sprueche[aktuellerIndex].subtitle;
-            
-            title.classList.add('fade-in');
-            subtitle.classList.add('fade-in');
-        }
-
-        // Wechsel alle 5 Sekunden
-        setInterval(naechsterSpruch, 5000);
-    </script>
 </head>
 <body>
     <div class="navbar">
         <!-- Navbar content will be copied from MainPage.html -->
     </div>
     <div class="content">
-        <h1 id="placeholder-title" class="placeholder-title text-animation--underline-thin fade-in">Ups! Diese Seite macht gerade ein Nickerchen 😴</h1>
-        <p id="placeholder-subtitle" class="placeholder-subtitle fade-in">Wie unsere gemütlichen Betten... nur nicht ganz so komfortabel!</p>
+        <h1 class="placeholder-title text-animation--underline-thin">Ups! Diese Seite macht gerade ein Nickerchen 😴</h1>
+        <p class="placeholder-subtitle">Wie unsere gemütlichen Betten... nur nicht ganz so komfortabel!</p>
     </div>
 </body>
 </html>
