@@ -1995,12 +1995,7 @@
 
                 // Funktion zum Aktualisieren des Warenkorb-Zählers
                 function updateCartCount() {
-                    const cart = JSON.parse(localStorage.getItem('shopping-cart')) || [];
-                    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-                    const cartCount = document.querySelector('[data-header-cart-count]');
-                    if (cartCount) {
-                        cartCount.textContent = totalItems.toString();
-                    }
+
                 }
 
                 // Warenkorb-Zähler beim Laden der Seite aktualisieren
